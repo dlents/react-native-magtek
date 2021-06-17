@@ -9,7 +9,7 @@
   "keywords": [
     "react-native"
   ],
-  "author": "david@lents.net",
+  "author": "dev@monoku.com",
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.60.0",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dlents/react-native-magtek.git"
+    "url": "https://github.com/dlents/react-native-magtek.git"
   },
   "bugs": {
     "url": "https://github.com/dlents/react-native-magtek/issues"

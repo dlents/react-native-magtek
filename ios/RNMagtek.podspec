@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = package["homepage"]
   s.license          = package["license"]
   s.platform         = :ios, "7.0"
-  s.source           = { :git => "https://github.com/dlents/react-native-magtek.git", :branch => "master" }
+  s.source           = { :git => package["repository"]["url"], :branch => "master" }
   s.source_files     = "*.{h,m}"
   s.requires_arc     = true
   s.static_framework = true
