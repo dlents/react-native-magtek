@@ -12,8 +12,8 @@
   "author": "dev@monoku.com",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.7.1",
-    "react-native-windows": "^0.64.11"
+    "react-native": "^0.63",
+    "react-native-windows": "^0.63"
   },
   "repository": {
     "type": "git",
