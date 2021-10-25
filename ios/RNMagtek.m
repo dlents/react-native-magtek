@@ -48,7 +48,6 @@ RCT_EXPORT_MODULE();
            @"name": cardDataObj.cardName,
            @"last4": cardDataObj.cardLast4,
            @"expDate": cardDataObj.cardExpDate,
-           @"expDate": cardDataObj.cardExpDate,
            @"expDateMonth": cardDataObj.cardExpDateMonth,
            @"expDateYear": cardDataObj.cardExpDateYear,
        },
