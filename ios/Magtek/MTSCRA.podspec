@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://www.magtek.com/'
   s.platform     = :ios
   s.author       = ''
-  s.source       = { :git => "https://github.com/dlents/react-native-magtek.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/dlents/magtek-library.git", :branch => "master" }
   s.frameworks   = %w(AVFoundation AudioToolbox CoreBluetooth ExternalAccessory)
   s.libraries    = %w()
   s.vendored_libraries = "libMTSCRA.a"
