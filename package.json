@@ -1,6 +1,6 @@
 {
   "name": "@dlents/react-native-magtek",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MagTek iOS library for React Native",
   "main": "index.js",
   "scripts": {
