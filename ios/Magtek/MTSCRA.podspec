@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MTSCRA'
-  s.version      = "0.0.2"
+  s.version      = "0.1.2"
   s.summary      = "The Magtek iOS SDK"
   s.homepage     = 'https://www.magtek.com/'
   s.platform     = :ios
