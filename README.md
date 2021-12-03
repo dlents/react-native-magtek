@@ -1,30 +1,27 @@
 # react-native-magtek (iOS Only)
 
 ## Getting started
-`$ npm install @monoku/react-native-magtek --save`
-
-### Using React-Native Link
-`$ react-native link @monoku/react-native-magtek`
+`$ yarn add git+https://github.com/dlents/react-native-magtek.git`
 
 #### Using cocoapods
 Add the following lines in your `Podfile`
 ```ruby
-  pod 'MTSCRA', path: '../node_modules/@monoku/react-native-magtek/ios/Magtek'
-  pod 'RNMagtek', path: '../node_modules/@monoku/react-native-magtek/ios'
+  pod 'MTSCRA', path: '../node_modules/@dlents/react-native-magtek/ios/Magtek'
+  pod 'RNMagtek', path: '../node_modules/@dlents/react-native-magtek/ios'
 ```
 and then run `pod install`.
 
 ### Manual installation
 
-#### iOS
+#### iOS (Deprecated with current version of XCode, use CocoaPods instead)
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `@monoku/react-native-magtek` and add `RNMagtek.xcodeproj`
+2. Go to `node_modules` ➜ `@dlents/react-native-magtek` and add `RNMagtek.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNMagtek.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
 ## Usage
 ```javascript
-import RNMagtek, { RNMagtekEventsEmitter } from '@monoku/react-native-magtek';
+import RNMagtek, { RNMagtekEventsEmitter } from '@dlents/react-native-magtek';
 
 # Connect device
 RNMagtek.connect((data) => {
@@ -48,7 +45,7 @@ RNMagtekEventsEmitter.addListener(
   (data) => {
     console.log(data)
     // The data object has the following attributes:
-    // sessionID, deviceSN, deviceKSN, magnePrint, magnePrintStatus, 
+    // sessionID, deviceSN, deviceKSN, magnePrint, magnePrintStatus,
     // track1, track2, track3
   }
 );
