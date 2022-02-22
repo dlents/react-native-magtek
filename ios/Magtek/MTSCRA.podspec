@@ -1,14 +1,18 @@
-Pod::Spec.new do |s|
-  s.name         = 'MTSCRA'
-  s.version      = "0.1.2"
-  s.summary      = "The Magtek iOS SDK"
-  s.homepage     = 'https://www.magtek.com/'
-  s.platform     = :ios
-  s.author       = ''
-  s.source       = { :git => "https://github.com/dlents/magtek-library.git", :branch => "master" }
-  s.frameworks   = %w(AVFoundation AudioToolbox CoreBluetooth ExternalAccessory)
-  s.libraries    = %w()
-  s.vendored_libraries = "libMTSCRA.a"
-  s.source_files = "MTSCRA.h"
-  s.public_header_files = "MTSCRA.h"
+require "json"
+
+package = JSON.parse(File.read(File.join(__dir__, "../package.json")))
+
+Pod::Spec.new do |spec|
+  spec.name         = 'MTSCRA'
+  spec.version      = "0.1.2"
+  spec.summary      = "The Magtek iOS SDK"
+  spec.homepage     = 'https://www.magtek.com/'
+  spec.platform     = :ios
+  spec.author       = 'Magtek'
+  spec.source       = { :git => package["repository"]["url"], :branch => "master" }
+  spec.source_files = '.'
+  spec.frameworks   = %w(AVFoundation AudioToolbox CoreBluetooth ExternalAccessory)
+  spec.libraries    = %w()
+  spec.vendored_libraries = 'Lib/Release-iphoneos/libMTSCRA.a', 'Lib/Release-iphonesimulator/libMTSCRA.a'
+  spec.public_header_files = 'MTSCRA.h'
 end
