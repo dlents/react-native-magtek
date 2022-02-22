@@ -1,6 +1,6 @@
 {
   "name": "@dlents/react-native-magtek",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "MagTek iOS library for React Native",
   "main": "index.js",
   "scripts": {
@@ -15,10 +15,7 @@
     "react-native": "^0.64",
     "react-native-windows": "^0.64"
   },
-  "dependencies": {
-      "@dlents/magtek-library": "git+https://github.com/dlents/magtek-library.git"
-  },
-  "repository": {
+   "repository": {
     "type": "git",
     "url": "https://github.com/dlents/react-native-magtek.git"
   },

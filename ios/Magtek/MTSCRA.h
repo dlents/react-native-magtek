@@ -18,11 +18,24 @@
 #import "AVFoundation/AVFoundation.h"
 #endif
 
-#warning Notification method will be deprecated on next release, please use delegate
 
 #ifdef DEBUG
 #define _DBGPRNT
 #endif
+
+/*
+ Error code
+ */
+
+#define ERROR_SUCCESS 0
+#define ERROR_TIMEOUT 1
+#define ERROR_DEVICE_NOT_OPEN 5
+#define ERROR_INVALID_PARAMETER 6
+#define ERROR_DEVICE_COMMUNICATION_ERROR 7
+#define ERROR_OTHER_ERROR 9
+#define ERROR_BUSY 15
+#define ERROR_DATA_IS_NOT_EXIST 16
+#define ERROR_UNKNOWN 255
 
 @class IMTSCRAData;
 @class MTSCRADevice;
@@ -340,9 +353,9 @@ typedef void (^MTSCRADebugCallback)(MTDebugInfo*);
     int commandBitsIndex;
 #if TARGET_OS_IPHONE
     EAAccessory * _accessory;
-    EASession *   _session;
+    //EASession *   _session;
     EAAccessoryManager *eaAccessory;
-    AVAudioSession *audioSession;
+    //AVAudioSession *audioSession;
 #endif
     NSMutableString *dataFromiDynamo;
     NSMutableString *deviceProtocolString;
@@ -442,6 +455,10 @@ void audioReaderDelegate(void*self, int status);
 - (int) sendCommandToDevice:(NSString *)pData __attribute__((deprecated))  __deprecated_msg("use sendcommandWithLength instead.");
 
 - (int) sendcommandWithLength:(NSString *)command;
+
+- (void) setTimeout : (NSUInteger) timeoutMS;
++ (void) setTimeFrame : (unsigned int) ms;
++ (void) enableDebugPrint : (BOOL) enabled;
 
 - (NSString*)sendCommandSync:(NSString*)command;
 
@@ -567,6 +584,8 @@ void audioReaderDelegate(void*self, int status);
 - (int) sendExtendedCommand:(NSString*)commandIn;
 
 - (NSString*) sendExtendedCommandSync :(NSString*) commandIn;
+
+- (int) getLastError;
 
 //Return Card Data TLV Pay load
 - (NSString*) getTLVPayload;
