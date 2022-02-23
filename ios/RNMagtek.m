@@ -86,6 +86,7 @@ RCT_EXPORT_METHOD(connect:(RCTResponseSenderBlock)callback) {
         MPMusicPlayerController *musicPlayer = [MPMusicPlayerController applicationMusicPlayer];
         musicPlayer.volume = 1.0f;
     }
+    // XXX: This seems to be a typo ("isDeviceOpenend")
     callback(@[@{@"isDeviceOpenend": @([self.lib isDeviceOpened]), @"isDeviceConnected": @([self.lib isDeviceConnected])}]);
 }
 

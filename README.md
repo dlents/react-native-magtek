@@ -6,7 +6,6 @@
 #### Using cocoapods
 Add the following lines in your `Podfile`
 ```ruby
-  pod 'MTSCRA', path: '../node_modules/@dlents/react-native-magtek/ios/Magtek'
   pod 'RNMagtek', path: '../node_modules/@dlents/react-native-magtek/ios'
 ```
 and then run `pod install`.
